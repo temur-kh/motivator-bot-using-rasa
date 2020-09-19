@@ -1,0 +1,89 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - i_need_some_inspiration
+  - have_to_do_activity
+  - deadline_soon
+  - create_a_notification
+  - thank_you_bot
+
+entities:
+  - date
+  - activity
+
+slots:
+  date:
+    type: text
+    initial_value: "today"
+
+  activity:
+    type: text
+    initial_value: "task"
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hi! What's up?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_good_luck:
+  - text: "Nice, good luck with your {activity}!"
+
+  utter_goodbye:
+  - text: "Bye!"
+  - text: "Goodbye!"
+
+  utter_what_did_happen:
+  - text: "What did happen?"
+  - text: "Maybe I can help you?"
+
+  utter_motivational_video:
+  - text: "Here is a motivational video by Shia LaBeouf for you:\n
+  Here is a link: https://www.youtube.com/watch?v=ZXsQAXx_ao0&ab_channel=MotivaShian"
+
+  utter_motivational_quote:
+  - text: "Push youself because no one else is going to do it for you!"
+  - text: "Great things never came from comfort zones."
+  - text: "Action will destroy your procrastination."
+  - text: "The secret of getting ahead is getting started."
+
+  utter_motivational_movie:
+  - text: "Watch a movie 'The Pursuit of Happyness' to get some inspiration:\n
+  Here is a link: https://www.imdb.com/title/tt0454921/"
+  - text: "Here is a good motivational movie 'Whiplash'. Watch it!\n
+  Here is a link: https://www.imdb.com/title/tt2582802/"
+
+  utter_when_is_deadline:
+  - text: "When is the deadline for {activity}?"
+
+  utter_hurry_up:
+  - text: "{date} is quite close. You better hurry up doing something."
+
+  utter_good_advice_to_start:
+  - text: "I suggest you making the first step even if a small one for {activity}. The hardest thing is to start."
+
+  utter_need_some_inspiration:
+  - text: "Do you need some inspiration to start {activity}?"
+
+  utter_you_are_welcome:
+  - text: "You're welcome. I'm always glad to help you."
+
+  utter_notification_created:
+  - text: "I've put a notification alarm for {date}."
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
